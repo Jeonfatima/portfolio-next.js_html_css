@@ -9,7 +9,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #F5EFEB;
     --foreground: #ededed;
   }
 }
@@ -18,4 +18,140 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Container Style */
+#container {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6; /* Improve readability */
+  color: #333; /* Set default text color */
+}
+
+/* Navbar Style */
+#navbar {
+  background-color: #567C8D; /* Navbar background */
+  color: whitesmoke; /* Text color */
+  padding: 10px 20px; /* Add consistent padding */
+  display: flex; /* Flexbox for alignment */
+  justify-content: center; /* Center links */
+  align-items: center; /* Center vertically */
+  gap: 50px; /* Adjust spacing between links */
+  font-weight: bold; /* Bold font for navbar */
+  font-size: 18px; /* Adjust font size */
+  height: 60px; /* Navbar height */
+  position: fixed; /* Fix navbar at the top */
+  top: 0;
+  width: 100%; /* Full width */
+  z-index: 1000; /* Ensure navbar stays above other elements */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+}
+
+/* Navbar Links */
+#navbar .child {
+  text-decoration: none; /* Remove underline */
+  color: whitesmoke; /* Link color */
+  margin: 0 10px; /* Adjust margin for spacing */
+  padding: 8px 12px; /* Add padding around links */
+  border-radius: 4px; /* Rounded corners */
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+/* Navbar Link Hover Effect */
+#navbar .child:hover {
+  background-color: #6A9EB0; /* Slightly lighter background on hover */
+  color: #fff; /* Ensure text remains readable */
+}
+
+/* Section Offset for Fixed Navbar */
+body {
+  margin: 0;
+  padding: 0;
+  padding-top: 70px; /* Offset for navbar height */
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+  #navbar {
+    flex-wrap: wrap; /* Wrap links on smaller screens */
+    gap: 20px; /* Reduce gap */
+    font-size: 16px; /* Adjust font size */
+  }
+
+  #navbar .child {
+    padding: 6px 8px; /* Reduce padding for smaller screens */
+  }
+}
+
+
+section{
+  
+  color: #2F4156;
+  font-weight: bold;
+  padding: 20px;
+  padding-left: 80px;
+
+}
+
+
+#h1{
+  font-size: 40px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Shadow effect */
+  transition: transform 0.3s ease, text-shadow 0.3s ease; 
+
+}
+
+#h1:hover {
+  cursor: pointer;
+  transform: scale(1.1); /* Slightly increase size on hover */
+  text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3); /* Darker and larger shadow on hover */
+}
+
+#h3{
+  color: #567c8d;
+  font-size: larger;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Shadow effect */
+  transition: transform 0.3s ease, text-shadow 0.3s ease; 
+
+}
+
+#h3:hover {
+  cursor: pointer;
+  transform: scale(1.1); /* Slightly increase size on hover */
+  text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3); /* Darker and larger shadow on hover */
+}
+
+
+#skills {
+  background-color: #F5EFEB; /* Light background */
+  padding: 20px;
+  padding-left: 80px;
+  border-radius: 8px;
+  
+  margin-top: 20px;
+}
+
+#skills ul {
+  list-style-type: none; /* Remove default bullets */
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Flexibility for various screen sizes */
+  gap: 20px; /* Space between boxes */
+}
+
+#skills li {
+  background-color: #c8d9e6; /* White background */
+  border: 2px solid #567c8d; /* Border color */
+  padding: 20px;
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow effect for each item */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+  text-align: center;
+}
+
+#skills li:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
 }
